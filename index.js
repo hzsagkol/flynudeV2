@@ -355,8 +355,10 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "davet") {
+        const embed = new Discord.RichEmbed()
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=443013254495862794&permissions=8&scope=bot**")    
         message.reply("Özel Mesajlar Kutunu Kontrol Et")
+        return message.channel.sendEmbed(embed)
     }
     
     if (message.content.toLowerCase() === "fly") {
