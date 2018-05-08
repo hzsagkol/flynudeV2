@@ -15,6 +15,32 @@ bot.on("ready", () => {
 bot.login("NDQzMDEzMjU0NDk1ODYyNzk0.DdHNqw.unO_UeeS2Gpv9L5Zf0VI1sWwXxo");
 
 
+bot.on('guildCreate', guild => {
+  let channel = bot.channels.get("443476387139944459")
+  const embed = new Discord.RichEmbed()
+  .setColor("0x000007")
+  .setAuthor(`Giriş ${guild.name}`)
+  .setThumbnail(guild.iconURL)
+  .addField("Kurucu", guild.owner)
+  .addField("Sunucu ID", guild.id, true)
+  .addField("Toplam Kullanıcı", guild.memberCount, true)
+  .addField("Toplam Kanal", guild.channels.size, true)
+   channel.send(embed);
+});
+bot.on('guildDelete', guild => {
+  let channel = bot.channels.get("443476387139944459")
+  const embed = new Discord.RichEmbed()
+  .setColor("0x000007")
+  .setAuthor(`Çıkış ${guild.name}`)
+  .setThumbnail(guild.iconURL)
+  .addField("Kurucu", guild.owner)
+  .addField("Sunucu ID", guild.id, true)
+  .addField("Toplam Kullanıcı", guild.memberCount, true)
+  .addField("Toplam Kanal", guild.channels.size, true)
+   channel.send(embed);
+});
+
+
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "sunucuresmi") {
 message.channel.sendEmbed(new Discord.RichEmbed()
