@@ -299,7 +299,7 @@ bot.on('guildMemberAdd', member => {
   .setColor('0x00cc44')
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle(`${member.user.username} Sunucuya katıldı. \n[${member.guild.memberCount} Kişi]`)
+  .setTitle(`${member.user.username} Sunucuya katıldı. \n[${member.guild.memberCount} Kişi] \n HOŞGELDİN ADAMIM`)
   .setTimestamp()
   channel.sendEmbed(embed);
 });
@@ -311,7 +311,7 @@ bot.on('guildMemberRemove', member => {
   .setColor('0xff1a1a')
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle(`${member.user.username} Sunucudan ayrıldı. \n[${member.guild.memberCount} Kişi]`)
+  .setTitle(`${member.user.username} Sunucudan ayrıldı. \n[${member.guild.memberCount} Kişi] \nNİYE GİTTİN BE...`)
   .setTimestamp()
   channel.sendEmbed(embed); 
 });
