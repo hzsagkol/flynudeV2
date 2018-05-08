@@ -378,7 +378,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
             .addField("Bot Sahibi", `<@${owner}>`, true)
 
-            .addField("Version", "0.0.6", true)
+            .addField("Version", "2.0.0", true)
 
             .addField("Toplam Sunucu Sayısı", bot.guilds.size, true)
 
@@ -398,7 +398,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
+  .addField("Komutlar", `**${prefix}1** - Bilgi Komutları \n**${prefix}2** - Eğlence Komutları \n**${prefix}3** - Moderasyon Komutları \n**${prefix}4** - Kişisel komutlar`)
   .addField("Bağlantılar", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=443013254495862794&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/V3XcdTm)")
   .setFooter('Eğer "flynude-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
   .setThumbnail(message.author.avatarURL)
@@ -417,7 +417,7 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "anakomutlar") {
+    if (message.content.toLowerCase() === prefix + "1") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
@@ -428,7 +428,7 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "kişisel") {
+    if (message.content.toLowerCase() === prefix + "4") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
@@ -439,7 +439,7 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "eğlence") {
+    if (message.content.toLowerCase() === prefix + "2") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
@@ -450,7 +450,7 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "moderasyon") {
+    if (message.content.toLowerCase() === prefix + "3") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
