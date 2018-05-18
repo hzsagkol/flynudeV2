@@ -489,7 +489,24 @@ bot.on("message", message => {
         
         return message.channel.sendEmbed(embed)
     }
-    
+    bot.on("message", message => {
+  const args = message.content.split(" ").slice(1);
+
+  if (message.content.startsWith(prefix + "eval")) {
+    if(message.author.id !== "341194704085319683") return;
+    try {
+      const code = args.join(" ");
+      let evaled = eval(code);
+
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+
+      message.channel.send(clean(evaled), {code:"xl"});
+    } catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
+  }
+});
     if (message.content.toLowerCase() === prefix + "matematik") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
